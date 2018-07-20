@@ -334,7 +334,7 @@ internal func XPath(fromCSS css: String) -> String {
           }
           
           for result in RegexConstants.attributeRegex.matches(in: token, options: [], range: nsrange) where result.numberOfRanges > 1 {
-            xpathComponent += "[@\(token[result.range(at: 1)])]"
+            xpathComponent += "[@\(token[result.rangeAt(1)])]"
           }
           
           token = xpathComponent
